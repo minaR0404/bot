@@ -1,6 +1,5 @@
-# Python3 MarketMaker(MM)BOTのサンプルロジックとソースコード（ https://note.com/magimagi1223/n/n5fba7501dcfd ）のコピペの改良版
-# 指値の基準をbbandsに依存する戦略、順張り戦略
-
+# Python3 MarketMaker(MM)BOTのサンプルロジックとソースコード（ https://note.com/magimagi1223/n/n5fba7501dcfd ）
+# 板情報のask/bidを軸にしたHFT(高頻度取引)コード
 
 #!/usr/bin/python3
 # coding: utf-8
