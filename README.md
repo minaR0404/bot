@@ -72,6 +72,8 @@ AvellanedaとStoikovによる効用関数では、以下の形としています
 
 実際の板では、中央値に近い価格帯ほど供給量が多くなるため、厚みの関数はexp関数で近似します。
 
+<img width="699" alt="スクリーンショット 2023-10-05 2 23 43" src="https://github.com/minaR0404/bot/assets/49789283/fd0bedfb-979b-4a57-9029-e68c3a4c3df9">
+
 <br>
 
 #### (c) 注文の強さ
