@@ -1,4 +1,3 @@
-# Python3 MarketMaker(MM)BOTのサンプルロジックとソースコード（ https://note.com/magimagi1223/n/n5fba7501dcfd ）
 # 板情報のask/bidを軸にしたHFT(高頻度取引)コード
 
 #!/usr/bin/python3
