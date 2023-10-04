@@ -1,7 +1,5 @@
-# Python3 MarketMaker(MM)BOTのサンプルロジックとソースコード（ https://note.com/magimagi1223/n/n5fba7501dcfd ）のコピペの改良版
-# 両側の最良気配値付近の指値をブレイクした方向に順張りで指値を出す戦略
-# 従来の両側の最良気配値に指値を置く戦略では、一方向に傾いて指値が置いていかれること（逆選択リスク）が多く、損失を出してしまったため。
-# 数秒の短期間の価格形成には一定の方向感が存在する傾向があると思われる。
+# 板情報を利用したHFT(高頻度取引)コード
+# ask,bidのいずれかブレイクした方向に片側指値で追従する戦略
 
 
 #!/usr/bin/python3
@@ -20,7 +18,6 @@ bitflyer = ccxt.bitflyer({
 
 # 取引する通貨、シンボルを設定
 COIN = 'BTC'
-#PAIR = 'BTCJPY28SEP2018'
 PAIR = 'FX_BTC_JPY'
 
 # ロット(単位はBTC)
@@ -348,8 +345,8 @@ while True:
 
         # 板情報を取得、実効ask/bid(指値を入れる基準値)を決定する
         Amount = get_amount()
-        #offset = get_offset(amount['offset'])
-        tick = get_effective_tick(size_thru=Amount['X'], offset=0, rate_ask=0, size_ask=0, rate_bid=0, size_bid=0)
+        offset = get_offset(amount['offset'])
+        tick = get_effective_tick(size_thru=Amount['X'], offset=offset, rate_ask=0, size_ask=0, rate_bid=0, size_bid=0)
         ask = float(tick['ask'])
         bid = float(tick['bid'])
         # 実効スプレッドを計算する
